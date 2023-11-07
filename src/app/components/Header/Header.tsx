@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { LogInIcon } from "lucide-react";
 import { signIn, signOut, useSession } from "next-auth/react";
+import { HeaderNav } from "./(components)/header-nav";
 
 export const Header = () => {
   const { status, data } = useSession();
@@ -16,8 +17,10 @@ export const Header = () => {
   };
 
   return (
-    <div>
-      <Button className="gap-2" onClick={handleLoginClick}>
+    <header className="p-4">
+      <HeaderNav />
+
+      {/* <Button className="gap-2" onClick={handleLoginClick}>
         <LogInIcon />
         Login
       </Button>
@@ -27,7 +30,7 @@ export const Header = () => {
         Logout
       </Button>
 
-      {data?.user ? <div>Olá {data?.user?.name}!</div> : <div>Faça Login</div>}
-    </div>
+      {data?.user ? <div>Olá {data?.user?.name}!</div> : <div>Faça Login</div>} */}
+    </header>
   );
 };
