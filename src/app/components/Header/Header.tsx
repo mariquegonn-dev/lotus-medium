@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { LogInIcon } from "lucide-react";
 import { signIn, signOut, useSession } from "next-auth/react";
 import { HeaderNav } from "./(components)/header-nav";
+import { menuConfig } from "./(components)/menu.config";
 
 export const Header = () => {
   const { status, data } = useSession();
@@ -17,8 +18,8 @@ export const Header = () => {
   };
 
   return (
-    <header className="p-4">
-      <HeaderNav />
+    <header className="border-y-[1px]">
+      <HeaderNav items={menuConfig} />
 
       {/* <Button className="gap-2" onClick={handleLoginClick}>
         <LogInIcon />
