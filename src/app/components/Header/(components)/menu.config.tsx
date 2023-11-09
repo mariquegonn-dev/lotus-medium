@@ -1,6 +1,7 @@
 import {
   BookmarksIcon,
   GearIcon,
+  PinIcon,
   SignOutIcon,
   UserIcon,
 } from "@/components/icons";
@@ -23,6 +24,10 @@ export const menuConfig: MainMenu = {
     {
       icon: <BookmarksIcon size={24} weight="light" color="#4B5563" />,
       label: "Library",
+    },
+    {
+      icon: <PinIcon size={24} weight="light" color="#4B5563" />,
+      label: "Pinneds",
     },
     {
       icon: <GearIcon size={24} weight="light" color="#4B5563" />,

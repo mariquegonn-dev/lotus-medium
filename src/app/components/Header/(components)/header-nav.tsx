@@ -1,6 +1,6 @@
 "use client";
 
-import { BellIcon, NotePencilIcon } from "@/components/icons";
+import { BellIcon, NotePencilIcon, PinIcon } from "@/components/icons";
 import {
   Menubar,
   MenubarContent,
@@ -57,6 +57,17 @@ export const HeaderNav = ({ items }: HeaderNavProps) => {
           <BellIcon size={24} weight="light" color="#4B5563" />
         </Link>
 
+        <Menubar className="border-none bg-none ">
+          <MenubarMenu>
+            <MenubarTrigger className="link-custom-component border-none bg-none p-0 outline-none hover:bg-none focus:bg-none">
+              <PinIcon size={24} weight="light" color="#4B5563" />
+            </MenubarTrigger>
+            <MenubarContent className="mr-4">
+              <MenubarItem>Você ainda não tem nenhum post fixado</MenubarItem>
+            </MenubarContent>
+          </MenubarMenu>
+        </Menubar>
+
         {status === "authenticated" ? (
           <Menubar className="border-none bg-none ">
             <MenubarMenu>
@@ -71,7 +82,7 @@ export const HeaderNav = ({ items }: HeaderNavProps) => {
                 )}
               </MenubarTrigger>
               <MenubarContent className="mr-4">
-                {items.items.map((item, index) => (
+                {items.items.map((item) => (
                   <MenubarItem
                     key={item.label}
                     className="link-custom-component group p-0"
