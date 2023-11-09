@@ -9,4 +9,5 @@ export {
   Bookmarks as BookmarksIcon,
   GearSix as GearIcon,
   Plugs as SignOutIcon,
+  PushPin as PinIcon,
 } from "@phosphor-icons/react";
