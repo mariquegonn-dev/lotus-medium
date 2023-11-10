@@ -8,7 +8,7 @@ type BaseSectionProps = {
 };
 
 const BaseSection = ({ className, children }: BaseSectionProps) => {
-  return <section className={cn("pt-[56px]", className)}>{children}</section>;
+  return <section className={cn("pt-[57px]", className)}>{children}</section>;
 };
 
 export { BaseSection };

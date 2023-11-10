@@ -57,7 +57,7 @@ export const HeaderNav = ({ items }: HeaderNavProps) => {
           <BellIcon size={24} weight="light" color="#4B5563" />
         </Link>
 
-        <Menubar className="border-none bg-none ">
+        <Menubar className="border-none bg-transparent">
           <MenubarMenu>
             <MenubarTrigger className="link-custom-component border-none bg-none p-0 outline-none hover:bg-none focus:bg-none">
               <PinIcon size={24} weight="light" color="#4B5563" />
